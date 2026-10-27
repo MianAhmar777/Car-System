@@ -1,0 +1,24 @@
+# Node Environment & Port
+NODE_ENV=production
+PORT=5000
+
+# Primary MySQL Database Connection (Use Prisma Versioned Migrations)
+DATABASE_URL="mysql://<PROD_DB_USER>:<PROD_DB_PASSWORD>@<PROD_DB_HOST>:3306/<PROD_DB_NAME>"
+
+# Production JWT Cryptographic Keys (Must use random 64+ character keys in production)
+JWT_SECRET="<GENERATE_64_CHAR_RANDOM_SECRET_KEY>"
+JWT_REFRESH_SECRET="<GENERATE_DIFFERENT_64_CHAR_RANDOM_SECRET_KEY>"
+JWT_EXPIRES_IN="15m"
+JWT_REFRESH_EXPIRES_IN="7d"
+
+# Storage Provider Configuration
+# Set to 'local' for development; set to 'supabase' for live production
+STORAGE_PROVIDER="supabase"
+LOCAL_STORAGE_PATH="./uploads"
+
+# Supabase Storage Configuration (BACKEND-ONLY — NEVER expose service role key to React frontend)
+SUPABASE_URL="https://<YOUR_PROJECT_ID>.supabase.co"
+SUPABASE_SERVICE_ROLE_KEY="<YOUR_ACTUAL_SUPABASE_SERVICE_ROLE_KEY>"
+
+# Production CORS & Security
+CORS_ORIGIN="https://your-production-app.com"

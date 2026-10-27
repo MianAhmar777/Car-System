@@ -1,0 +1,17 @@
+# node_modules
+node_modules/
+dist/
+coverage/
+
+# Environment variables
+.env
+.env.production
+.env.local
+
+# Local uploads
+uploads/
+*.log
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
